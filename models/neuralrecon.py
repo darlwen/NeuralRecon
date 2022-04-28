@@ -29,7 +29,7 @@ class NeuralRecon(nn.Module):
 
     def normalizer(self, x):
         """ Normalizes the RGB images to the input range"""
-        return (x - self.pixel_mean.type_as(x)) / self.pixel_std.type_as(x)
+        return (x - self.pixel_mean.type_as(x)) // self.pixel_std.type_as(x)
 
     def forward(self, inputs, save_mesh=False):
         '''
